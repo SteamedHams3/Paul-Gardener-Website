@@ -1,13 +1,131 @@
+body {
+    background-color: #013220;
+}
+
+html{
+    scroll-behavior: smooth;
+}
 .nav-link{
     color: black;
     margin: 30px;
 }
 .nav-link:hover{
-    color: #FF92A5;
+    color: white;
     opacity: 80%;
     text-decoration: none;
 }
 
 .navbar-color{
-    background-color: white;
+    background-color: #90EE90;
 }
+
+h1{
+    color: white;
+    font-size: 70px;
+    padding: 0 120px;
+    font-family: "lorimer-no-2", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.h1-about{
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    font-family: "lorimer-no-2", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+#about{
+    padding-top: 40px;
+}
+.h1-services{
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    font-family: "lorimer-no-2", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.h1-gallery{
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    font-family: "lorimer-no-2", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.h1-contact{
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    font-family: "lorimer-no-2", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.about-p{
+    font-size: 18px;
+    color: #F5F5F5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    text-align: left;
+}
+.services-p{
+    font-size: 18px;
+    color: #F5F5F5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    text-align: left;
+}
+.gallery-p{
+    font-size: 18px;
+    color: #F5F5F5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    text-align: left;
+}
+
+.contact-p{
+    font-size: 18px;
+    color: #F5F5F5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    text-align: left;
+}
+
+.h5-footer{
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 20px;
+    font-family: "lorimer-no-2", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+.footer-color{
+    background-color: #90EE90;   
+    margin-top: 0px; /* Remove any margin that pushes the footer down */
+    padding-top: 10px; /* Optionally reduce padding on top */
+    padding-bottom: 10px;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* space between links */
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-links a:hover{
+    color: white;
+}
+

@@ -1,0 +1,13 @@
+.nav-link{
+    color: black;
+    margin: 30px;
+}
+.nav-link:hover{
+    color: #FF92A5;
+    opacity: 80%;
+    text-decoration: none;
+}
+
+.navbar-color{
+    background-color: white;
+}

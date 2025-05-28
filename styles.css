@@ -129,3 +129,9 @@ h1{
     color: white;
 }
 
+@media (max-width: 700px) {
+  .h1-about, .h1-services, .h1-gallery, .h1-contact {
+    text-align: center;
+    font-size: 45px;
+  }
+}

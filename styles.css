@@ -88,6 +88,14 @@ h1{
     text-align: left;
 }
 
+.gallery-p-caption{
+    font-size: 18px;
+    color: #F5F5F5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+}
+
 .contact-p{
     font-size: 18px;
     color: #F5F5F5;
@@ -147,14 +155,7 @@ h1{
   margin: auto;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  position: absolute;
-  width: 100%;
-}
+
 
 .mySlides img{
     width: 100%;
@@ -162,10 +163,20 @@ h1{
     object-fit:cover;
 }
 
+
+
+.mySlides {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none; /* disable interaction */
+}
+
 .mySlides.showing {
-  display: block;
   opacity: 1;
   position: relative;
+  pointer-events: auto;
 }
 
 /* Next & previous buttons */
@@ -263,17 +274,101 @@ h1{
   to {opacity: 1}
 }
 
+.before-after-mobile{
+  display: none;
+}
+
+.before-after-slide {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+.before-after-slide.showing {
+  opacity: 1;
+  position: relative;
+  pointer-events: auto;
+}
+.before-after-desktop{
+  display: flex;
+  gap: 60px; 
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: nowrap;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  object-fit: cover;
+}
+
+.image-container{
+  text-align: center;
+  max-width: 480px;
+}
+
+
+
+
+
+
 @media (max-width: 700px) {
-  .slideshow-container {
-    height: 300px; /* fixed height for small screens */
+  
+   .slideshow-container {
+    height: 300px; /* fixed height */
   }
-  .mySlides img {
+  .slideshow-container .mySlides img {
+    height: 300px; /* match container height */
+    width: 100%;   /* full width */
+    object-fit: cover; /* scale and crop to fill */
+  }
+
+  /* Replace .mySlides with .before-after-slide */
+  .before-after-mobile .before-after-slide img {
     height: 300px;  /* match container height */
     object-fit: cover;
   }
+
   .text, .text-image2, .text-image3 {
     bottom: 20px !important; /* Move caption closer to bottom */
     font-size: 14px; /* Optional: smaller font on phones */
     padding: 4px 8px; /* Optional: smaller padding */
   }
+
+  .before-after-desktop {
+    display: none;
+  }
+
+  .before-after-mobile {
+    display: block;
+    max-width: 480px;
+    margin: auto;
+    height: 300px;
+    position: relative;
+  }
+
+  .before-after-mobile .text {
+    bottom: 20px !important;
+    font-size: 14px;
+    padding: 4px 8px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+  }
 }
+
+  
+
+
+
+
+
+  
+

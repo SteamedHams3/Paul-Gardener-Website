@@ -24,6 +24,10 @@ html{
     background-color: #90EE90;
 }
 
+.navbar-brand{
+ font-family: "lorimer-no-2", sans-serif;
+}
+
 h1{
     color: white;
     font-size: 70px;

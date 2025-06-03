@@ -9,6 +9,11 @@ html{
     color: black;
     margin: 30px;
 }
+
+.mobile-title{
+    color: black;
+    font-family: "lorimer-no-2", sans-serif;
+}
 .nav-link:hover{
     color: white;
     opacity: 80%;
@@ -387,6 +392,47 @@ h1{
     text-align: center;
     position: absolute;
     width: 100%;
+  }
+
+  .about-container{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text{
+    margin-left: 0;
+  }
+
+   .h1-services, .h1-gallery{
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 16px;
+  }
+
+  .h1-about {
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .h1-contact{
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 6px;
+    padding-bottom: 16px;
+  }
+
+  .h5-footer{
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 

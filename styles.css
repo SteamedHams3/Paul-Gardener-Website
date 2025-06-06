@@ -391,9 +391,14 @@ h1{
   object-fit: cover;
 }
 
-.image-container{
+.image-container-gallery{
   text-align: center;
   max-width: 480px;
+}
+
+.gallery-image:hover{
+  transition: transform 0.2s;
+  transform: translateY(-5px);
 }
 
 

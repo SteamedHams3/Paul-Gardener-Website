@@ -259,7 +259,7 @@ h1{
 .footer-links{
     display: flex;
     justify-content: center;
-    gap: 30px; /* space between links */
+    gap: 30px; 
     margin-top: 20px;
     font-size: 14px;
 }
@@ -271,6 +271,19 @@ h1{
 
 .footer-links a:hover{
     color: white;
+}
+
+.portfolio-link{
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.portfolio-link a{
+  color: black;
+  text-decoration: none;
 }
 
 @media (max-width: 700px) {

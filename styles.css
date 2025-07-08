@@ -374,6 +374,23 @@ h1{
  margin-top: -500px;
 }
 
+@media (max-width: 700px) {
+  .mySlides img[src="images/paul6.jpg"] {
+    margin-top: 0; /* or adjust to fit the new container height */
+  }
+
+  .mySlides img[src="images/tree5.jpg"] {
+    object-position: center top; /* or adjust to fit the new container height */
+  }
+
+   .text-image3 {
+    top: auto !important;
+  }
+
+
+
+}
+
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;

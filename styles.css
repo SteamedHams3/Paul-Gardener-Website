@@ -142,6 +142,31 @@ h1{
   transition: transform 0.3s ease;
 }
 
+.testimonial-card.showing{
+  background: #2E6B2E;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: transform 0.1s ease-out, box-shadow 0.2s;
+  width: 50%;
+   margin-left: auto;
+  margin-right: auto;
+  display:block;
+}
+
+.testimonial-card{
+display: none;
+}
+
+.testimonial-slide {
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+.testimonial-slide.showing {
+  display: block;
+}
+
 
 
 .card-grid{
@@ -188,6 +213,32 @@ h1{
     font-style: normal;
     margin-top: 20px;
 }
+
+.h1-testimonials{
+  color: white;
+    text-align: center;
+    font-size: 70px;
+    font-family: "lorimer-no-2", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 20px;
+}
+
+.testimonial-p{
+   font-size: 18px;
+    color: #F5F5F5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.stars{
+  color: gold;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+
 
 .h3-services{
     color: white;

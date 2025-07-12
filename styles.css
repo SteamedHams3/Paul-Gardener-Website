@@ -211,11 +211,12 @@ h1{
 }
 
 #testimonials .prev {
-  left: 15px !important;  /* Push arrow closer to carousel */
+  left: 200px !important;  /* Push arrow closer to carousel */
+  
 }
 
 #testimonials .next {
-  right: 15px !important;
+  right: 200px !important;
 }
 
 
@@ -712,6 +713,16 @@ h1{
     padding-bottom: 16px;
   }
 
+  .h1-testimonials{
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 20px;
+    padding-bottom: 16px;
+  }
+
   .h1-about {
     text-align: center;
     font-size: 40px;
@@ -748,6 +759,29 @@ h1{
     object-fit: cover;
   }
 }
+
+@media (max-width: 700px) {
+  .testimonial-carousel {
+    max-width: 90%;  /* make the container wider on small screens */
+    margin: 0 auto;  /* center container */
+  }
+  
+  .testimonial-card {
+    width: 90%;      /* wider cards on small screens */
+    margin-left: auto;  /* center card horizontally */
+    margin-right: auto;
+    /* keep the rest as is for transitions */
+  }
+
+ #testimonials .prev {
+  left: -15px !important;  /* move left arrow closer to left edge */
+}
+
+#testimonials .next {
+  right: -15px !important; /* move right arrow closer to right edge */
+}
+}
+
 
 
 

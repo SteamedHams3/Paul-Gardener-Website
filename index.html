@@ -192,30 +192,26 @@
       <section id="testimonials">
         <h1 class="h1-testimonials"> What Our Customers Say</h1>
         
-        <div dlass="testimonial-carousel">
+        <div class="testimonial-carousel">
           <div class="testimonial-card showing">
-          <div class="testimonial-slide showing">
             <p class="testimonial-p"> Review 1 test! </p>
             <p class="testimonial-p"> Person 1</p>
             <p class="stars">★★★★★</p>
           </div>
-          </div>
 
           <div class="testimonial-card">
-          <div class="testimonial-slide">
             <p class="testimonial-p"> Review 2 test! </p>
             <p class="testimonial-p"> Person 2</p>
             <p class="stars">★★★★★</p>
           </div>
-          </div>
+          
 
           <div class="testimonial-card">
-          <div class="testimonial-slide">
             <p class="testimonial-p"> Review 3 test! </p>
             <p class="testimonial-p"> Person 3</p>
             <p class="stars">★★★★★</p>
           </div>
-          </div>
+        
           
         </div>
             <button class="prev" aria-label="Previous testimonial">&#10094;</button>
@@ -372,6 +368,67 @@ startAutoSlide('main');
 showSlides(slideIndexBeforeAfter, 'beforeAfter');
 startAutoSlide('beforeAfter');
 
+(() => {
+  const cards = document.querySelectorAll('.testimonial-card');
+  const prevBtn = document.querySelector('#testimonials .prev');
+  const nextBtn = document.querySelector('#testimonials .next');
+  const dots = document.querySelectorAll('#testimonials .dot');
+  let currentIndex = 0;
+  let autoSlideInterval;
+
+  function showCard(index) {
+    if (index >= cards.length) index = 0;
+    if (index < 0) index = cards.length - 1;
+    currentIndex = index;
+
+    cards.forEach((card, i) => {
+      card.classList.toggle('showing', i === index);
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextCard() {
+    showCard(currentIndex + 1);
+  }
+
+  function prevCard() {
+    showCard(currentIndex - 1);
+  }
+
+  function startAutoSlide() {
+    stopAutoSlide();
+    autoSlideInterval = setInterval(nextCard, 3000);
+  }
+
+  function stopAutoSlide() {
+    if (autoSlideInterval) clearInterval(autoSlideInterval);
+  }
+
+  // Event listeners
+  nextBtn.addEventListener('click', () => {
+    nextCard();
+    startAutoSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    prevCard();
+    startAutoSlide();
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      const idx = Number(e.target.dataset.index);
+      showCard(idx);
+      startAutoSlide();
+    });
+  });
+
+  // Initialize
+  showCard(currentIndex);
+  startAutoSlide();
+})();
 
  
 

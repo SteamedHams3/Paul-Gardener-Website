@@ -191,9 +191,38 @@ h1{
   text-align: center;
 }
 
+.testimonial-carousel {
+  position: relative; /* make arrows position relative to this container */
+  max-width: 70%; /* or your testimonial width */
+  margin: 0 auto; /* center carousel */
+}
+#testimonials .prev,
+#testimonials .next {
+  all: unset;              /* Reset everything */
+  color: white;            /* White arrow color */
+  font-size: 2.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 0;              /* No padding */
+  user-select: none;
+}
+
+#testimonials .prev {
+  left: 15px !important;  /* Push arrow closer to carousel */
+}
+
+#testimonials .next {
+  right: 15px !important;
+}
 
 
-
+#testimonials .prev:hover,
+#testimonials .next:hover {
+  color: #90EE90;
+}
 
 
 .card-grid{

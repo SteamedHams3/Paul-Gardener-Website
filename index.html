@@ -237,13 +237,14 @@
         <div class="container">
           <p class="contact-p"> For a quote or to discuss your gardening needs, please give Paul a call or text anytime on 07745 326400 - we look forward to hearing from you!</p>
           <div class="phone-container"> 
-            <a href="tel:+447745326400" class="phone-button">
+            <a href="tel:+447745326400" class="phone-button" id="callPaul">
           <img src="images/phone_icon.png" alt="green phone icon"> <span class="phone-text">Call Paul on 07745 326400</span>
            </a>
         </div>
       </div>
         </section>
-      
+
+ 
 
 
 
@@ -434,6 +435,11 @@ startAutoSlide('beforeAfter');
   showCard(currentIndex);
   startAutoSlide();
 })();
+
+
+  document.getElementById("callPaul").addEventListener("click", function () {
+    console.log("Call button was clicked!");
+  });
 
  
 

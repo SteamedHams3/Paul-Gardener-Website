@@ -176,7 +176,7 @@ h1{
   transform: translateX(0);
   position: relative;
   z-index: 1;
-  transition: transform 0.1s ease-out, box-shadow 0.2s;
+ transition: opacity 1.2s ease, transform 0.1s ease-out, box-shadow 0.2s;
 }
 
 
@@ -714,10 +714,14 @@ h1{
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   
    .slideshow-container {
-    height: 300px; /* fixed height */
+    display: none;
+  }
+  
+  .dots-container{
+    display: none;
   }
   .slideshow-container .mySlides img {
     height: 300px; /* match container height */

@@ -27,6 +27,7 @@ html{
 
 .navbar-brand{
  font-family: "lorimer-no-2", sans-serif;
+ font-size: 30px;
 }
 
 .navbar-toggler {
@@ -163,12 +164,21 @@ h1{
   right: 0;
 }
 
+
+
+.testimonial-card.showing:hover{
+   transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
 .testimonial-card.showing {
   opacity: 1;
   transform: translateX(0);
   position: relative;
   z-index: 1;
+  transition: transform 0.1s ease-out, box-shadow 0.2s;
 }
+
 
 
 
@@ -749,6 +759,15 @@ h1{
     width: 100%;
   }
 
+  .before-after-slide img {
+    height: 300px;          /* Keeps the image height */
+    width: 100%;            /* Full width */
+    object-fit: cover;      /* Keeps the image from stretching */
+    object-position: center 2%; /* <-- This shows the bottom part of the image */
+  }
+
+  
+
   .about-container{
     flex-direction: column;
     text-align: center;
@@ -756,6 +775,11 @@ h1{
 
   .about-text{
     margin-left: 0;
+  }
+
+  .h2-heading{
+    text-align: center;
+    font-size: 30px;
   }
 
 

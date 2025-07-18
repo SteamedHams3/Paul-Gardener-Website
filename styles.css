@@ -729,6 +729,19 @@ h1{
     object-fit: cover; /* scale and crop to fill */
   }
 
+  .navbar-brand{
+    font-size: 24px;
+    font-family: "lorimer-no-2", sans-serif;
+    text-align: center;
+  }
+  
+  .footer-links{
+    display: flex;
+    justify-content: center;
+    gap: 23px; 
+    margin-top: 20px;
+    font-size: 14px;
+  }
   /* Replace .mySlides with .before-after-slide */
   .before-after-mobile .before-after-slide img {
     height: 300px;  /* match container height */
@@ -831,7 +844,7 @@ h1{
   }
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 1024px) and (min-width: 768px) and (orientation: portrait)  {
   .image-container-gallery {
     max-width: 45vw;
     height: 500px;
@@ -850,6 +863,28 @@ h1{
 
 #testimonials .next {
   right: -15px !important; /* move right arrow closer to right edge */
+}
+}
+
+@media (max-width: 1920px) and (min-width: 768px) and (orientation: landscape)  {
+  .image-container-gallery {
+    max-width: 45vw;
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #testimonials .prev {
+  left: -30px !important;  /* move left arrow closer to left edge */
+}
+
+#testimonials .next {
+  right: -30px !important; /* move right arrow closer to right edge */
 }
 }
 
